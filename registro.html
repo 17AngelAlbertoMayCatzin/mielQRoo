@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Direccion</title>
+    <link rel="Stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Botón Agregar Direccion</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Registrarse</button>
+    
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h1>Agregar</h1>
+          <p>Por favor llene los campos para Agregar Direccion</p>
+          <hr>
+          <label for="email"><b>Nombre</b></label>
+          <input type="text" placeholder="Ingrese Nombre" name="nombre" required>
+          
+          <label for="email"><b>Apellido</b></label>
+          <input type="text" placeholder="Ingrese Apellido" name="apellido" required>
+
+          <label for="email"><b>Código Postal</b></label>
+          <input type="text" placeholder="Ingrese Código Postal" name="nombre" required>
+
+          <label for="email"><b>Estado</b></label>
+          <input type="text" placeholder="Ingrese Estado" name="estado" required>
+
+          <label for="email"><b>Municipio</b></label>
+          <input type="text" placeholder="Ingrese Delegación/Municipio" name="municipio" required>
+
+          <label for="email"><b>Colonia</b></label>
+          <input type="text" placeholder="Ingrese Colonia/Asentamiento" name="colonia" required>
+
+          <label for="email"><b>Direccion</b></label>
+          <input type="text" placeholder="Calle" name="direccion" required>
+
+          <label for="email"><b>N° exterior</b></label>
+          <input type="text" placeholder="Manzana" name="exterior" required>
+
+          <label for="email"><b>N° Interior</b></label>
+          <input type="text" placeholder="Lote" name="interior" required>
+
+          <label for="email"><b>¿Entre que calles esta?</b></label>
+          <input type="text" placeholder="calle 1/calle 2" name="calles" required>
+          
+          <!--<label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuérdame
+          </label>-->
+    
+          <p>Al crear una cuenta usted esta de acuerdo con los <a href="#" style="color:dodgerblue">Terminos y Condiciones</a>.</p>
+    
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Agregar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+</body>
+</html>
