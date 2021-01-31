@@ -36,20 +36,57 @@ comerciantes = [{
     {
          "id": "3",
         "nombreComerciante": "Felipe de Jesús Dominguez Hernandez",
-        "descripcion": "Soy apicultor de la comunidad de , tengo disponible 10 kilos de miel a excelente precio. Contactame para más información",
+        "descripcion": "Soy apicultor de la comunidad de Tusik, tengo disponible 10 kilos de miel a excelente precio. Contactame para más información",
         "img": "img/comerciante3.jpg",
         "municipio": "Felipe Carrillo Puerto",
         "localidad": "Tusik",
-        "telefono": "9831127869",
+        "telefono": "9831127854",
         "correo": "f.jesus.dH@gmail.com",
         "precioVenta": "$29",
-    }
+    }, 
+    { 
+         "id": "4",
+        "nombreComerciante": "Carlos Pat Ek",
+        "descripcion": "Soy apicultor de la comunidad de Limones, tengo disponible 23 kilos de miel a excelente precio. Contactame para más información",
+        "img": "img/comerciante4.jpg",
+        "municipio": "Bacalar",
+        "localidad": "Limones",
+        "telefono": "9831124569",
+        "correo": "c.p.e@gmail.com",
+        "precioVenta": "$40",
+    }, 
+    { 
+         "id": "5",
+        "nombreComerciante": "Federico Alonso Tapía",
+        "descripcion": "Soy apicultor de la comunidad de Noh-Bec, tengo disponible 50 kilos de miel a excelente precio. Contactame para más información",
+        "img": "img/comerciante5.jpg",
+        "municipio": "Felipe Carrillo Puerto",
+        "localidad": "Noh-Bec",
+        "telefono": "9831113869",
+        "correo": "f.a.ta@gmail.com",
+        "precioVenta": "$28",
+    }, 
+    { 
+         "id": "6",
+        "nombreComerciante": "Maria Lopez Pech",
+        "descripcion": "Soy apicultora de la comunidad de Limones, tengo disponible 50 kilos de miel a excelente precio. Contactame para más información",
+        "img": "img/comerciante6.jpg",
+        "municipio": "Bacalar",
+        "localidad": "Maya Balam",
+        "telefono": "9832327869",
+        "correo": "m.l.pech@gmail.com",
+        "precioVenta": "$45",
+    }, 
 ];
 
 createTaskCard = (task) => {
-	//creamos un elemento DIV con la clase card de Bootstrap
+    //creamos un elemento DIV con la clase card de Bootstrap4
+    col1 = document.createElement('div');
+    col1.className = 'col col-sm-12 col-md-4 col-lg-4';
+    col1.setAttribute('style','padding: 15px 15px;');
     card = document.createElement('div');
     card.className = 'card';
+    card.setAttribute('style','background: #fffbf4;');
     //Creamos un elemento imagen 
     cardImg = document.createElement('img');
     cardImg.className = 'card-img-top';
@@ -71,21 +108,18 @@ createTaskCard = (task) => {
     descripcionL.className = 'card-text';
     //Creamos un boton
     boton = document.createElement("button");
-    boton.innerHTML = "Ver comerciante";
+    boton.innerHTML = 'Ver comerciante';
     //Asiganos clases de Bootstrap
-    boton.className = 'btn-outline-primary';
+    boton.className = 'btn btn-primary';
     boton.setAttribute('style','padding: 15px 15px;');
-    //Función sin terminar
-    boton.onclick = function() {
-     alert("Comerciante");
-    };
     //Agregamos lo correspondiente
+    col1.appendChild(card);
     card.appendChild(cardImg);
     cardBody.appendChild(title);
     cardBody.appendChild(descripcionL);
     card.appendChild(cardBody);
     card.appendChild(boton);
-    cardContainer.appendChild(card);
+    cardContainer.appendChild(col1);
 }
 initListOfTasks = () => {
     if (cardContainer) {
@@ -96,7 +130,7 @@ initListOfTasks = () => {
     cardContainer = document.getElementById('card-container');
     //Iteración del Json de comerciantes
     comerciantes.forEach((task) => {
-    	//Llamando a la función para crear las tarjetas de los comerciantes
+        //Llamando a la función para crear las tarjetas de los comerciantes
         createTaskCard(task);
     });
 };
