@@ -34,7 +34,17 @@
 						<li class="nav-item">
 							<a href="#" class="nav-link">Contacto</a>
 						</li>
-						<a class="btn btn-outline-primary" href="login.html">Ingresar</a>
+                        <div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-user-circle"></i>
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="publicacion.html">Publicar</a>
+								<a class="dropdown-item" href="#">Mi cuenta</a>
+							    <a class="dropdown-item" href="index.html">Cerrar Sesión</a>
+						 	</div>
+							<!-- <a class="btn btn-outline-primary" href="profile.html"></a> -->
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -99,7 +109,7 @@
 	</section>
 	<section class="comerciantes">
 		<div class="container">
-			<div class="row " id="card-comerciantes"></div>
+			<div class="row" id="card-comerciantes"></div>
 		</div>
 	</section>
 
@@ -154,8 +164,8 @@
 		</div>
 	</footer>
 
-	<script src="js/jquery.js"></script>
-	<script src="js/popper.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Archivo script de comerciantes -->
 	<script src="js/comerciantes.js"></script>
