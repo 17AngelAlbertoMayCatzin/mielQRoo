@@ -4,7 +4,7 @@ var cardContainer;
 var createTaskCard;
 var card;
 var cardImg;
-var cardBody
+var cardBody;
 var descripcionL;
 var title;
 var boton;
@@ -33,7 +33,7 @@ function cargarComerciantes(){
         col1.setAttribute('style','padding: 15px 15px;');
         card = document.createElement('div');
         card.className = 'card';
-        card.setAttribute('style','background: #fffbf4;');
+        card.setAttribute('style','background: #f8efdf;');
         //Creamos un elemento imagen 
         cardImg = document.createElement('img');
         cardImg.className = 'card-img-top';
@@ -70,11 +70,11 @@ function cargarComerciantes(){
     }
     initListOfTasks = () => {
         if (cardContainer) {
-            document.getElementById('card-container').replaceWith(cardContainer);
+            document.getElementById('card-comerciantes').replaceWith(cardContainer);
             return;
         }
     
-        cardContainer = document.getElementById('card-container');
+        cardContainer = document.getElementById('card-comerciantes');
         //Iteración del Json de comerciantes
         dato.forEach((task) => {
             //Llamando a la función para crear las tarjetas de los comerciantes

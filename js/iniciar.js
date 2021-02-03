@@ -27,7 +27,7 @@ try {
 		}
 		if(userAndPasswordPresent==true){
 			alert('Bienvenido');
-		  window.open("index.html");
+		  window.open("index-access.html");
 		} 
 		}
 	throw "myException"; // genera una excepción
