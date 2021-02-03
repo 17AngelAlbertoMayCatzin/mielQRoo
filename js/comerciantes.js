@@ -30,10 +30,10 @@ function cargarComerciantes(){
         //creamos un elemento DIV con la clase card de Bootstrap4
         col1 = document.createElement('div');
         col1.className = 'col col-sm-12 col-md-4 col-lg-4';
-        col1.setAttribute('style','padding: 15px 15px;');
+        col1.setAttribute('style','padding: 15px 15px; text-align:center;');
         card = document.createElement('div');
         card.className = 'card';
-        card.setAttribute('style','background: #f8efdf;');
+        card.setAttribute('style','background: #f8efdf; border:none; margin-bottom:40px;');
         //Creamos un elemento imagen 
         cardImg = document.createElement('img');
         cardImg.className = 'card-img-top';
@@ -48,6 +48,7 @@ function cargarComerciantes(){
         //Obtenemos del Json el nombre del comerciantes y se asigna
         title.innerText = task.nombreComerciante;
         title.className = 'card-title';
+        title.setAttribute('style','text-transform: uppercase; font-weight:300;');
         //Creamos un p para agregar la descripción del comerciantes del Json
         descripcionL = document.createElement('p');
         descripcionL.innerText = task.descripcion;

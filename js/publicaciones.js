@@ -34,10 +34,10 @@ function cargarPublicaciones(){
         //creamos un elemento DIV con la clase card de Bootstrap4
         col2 = document.createElement('div');
         col2.className = 'col col-sm-12 col-md-4 col-lg-4';
-        col2.setAttribute('style','padding: 15px 15px;');
+        col2.setAttribute('style','padding: 15px 15px; text-align:center;');
         card1 = document.createElement('div');
         card1.className = 'card';
-        card1.setAttribute('style','background: #f8efdf;');
+        card1.setAttribute('style','background: #f8efdf; border:none; margin-bottom:40px;');
         //Creamos un elemento imagen 
         cardImg1 = document.createElement('img');
         cardImg.className = 'card-img-top';
@@ -49,20 +49,21 @@ function cargarPublicaciones(){
         cardBody1.className = 'card-body';
         //Creamos un H5 con la clase card-title
         title1 = document.createElement('h5');
-        //Obtenemos del Json el nombre del comerciantes y se asigna
+        //Obtenemos del Json el nombre del publicaciones y se asigna
         title1.innerText = task.nombreComerciante;
         title1.className = 'card-title';
-        //Creamos un p para agregar la descripción del comerciantes del Json
+        title1.setAttribute('style','text-transform: uppercase; font-weight:300;');
+        //Creamos un p para agregar la descripción del publicaciones del Json
         descripcion1 = document.createElement('p');
         descripcion1.innerText = task.Descripcion;
         //el parrafo es de la clase card-text
         descripcion1.className = 'card-text';
-        //Creamos un p para agregar la descripción del comerciantes del Json
+        //Creamos un p para agregar la descripción del cpublicaciones del Json
         precio = document.createElement('p');
         precio.innerText ='Precio por kilo: '+ task.precioVenta ;
         //el parrafo es de la clase card-text
         precio.className = 'card-text';
-        //Creamos un p para agregar la descripción del comerciantes del Json
+        //Creamos un p para agregar la descripción del publicaciones del Json
         disponibilidad = document.createElement('p');
         disponibilidad.innerText = 'Disponibilidad: '+task.disponibilidad ;
         //el parrafo es de la clase card-text
