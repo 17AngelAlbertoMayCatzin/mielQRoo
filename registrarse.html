@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar usuario</title>
     <link rel="Stylesheet" href="css/bootstrap.min.css">
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
 </head>
 
 <body>
@@ -47,98 +42,21 @@
     
           <label for="psw-repeat"><b>Repita la contraseña</b></label>
           <input type="password" placeholder="Repita la contraseña" name="psw-repeat" required>
-          
-          <!--<label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuérdame
-          </label>-->
     
-          <!--<p>Al crear una cuenta usted esta de acuerdo con los <a href="#" style="color:dodgerblue">Terminos y Condiciones</a>.</p>
-          -->
+          <p>Al crear una cuenta usted esta de acuerdo con los <a href="#" style="color:dodgerblue">Terminos y Condiciones</a>.</p>
+          
           <div class="clearfix">
-            <button type="button" onclick="parent.window.close();" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="cerrar()" class="cancelbtn">Cancel</button>
             <button type="submit" class="signupbtn"  onclick="crearCuenta(this.form);" >Registrar</button>
           </div>
         </div>
       </form>
     </div>
-    <script>
-      const db = firebase.database();
-      //Esta funcion agrega usuario al sistema
-      function crearCuenta(form) {
-          psw = form.elements["psw"].value;
-          pswRepeat = form.elements["psw-repeat"].value;
-          correo = form.elements["email"].value;
 
-          if(psw == pswRepeat && 
-            form.elements["psw"].value != "" && 
-            form.elements["email"].value != "" &&
-            form.elements["nombre"].value != "" &&
-            form.elements["apellido"].value != "" &&
-            form.elements["municipio"].value != "" &&
-            form.elements["localidad"].value != "" &&
-            form.elements["telefono"].value != "" &&
-            form.elements["usuario"].value != "" &&
-            validarEmail(correo)
-            ){
-            nombre = form.elements["nombre"].value +" "+form.elements["apellido"].value;
-            municipio = form.elements["municipio"].value;
-            localidad = form.elements["localidad"].value;
-            telefono = form.elements["telefono"].value;
-            usuario = form.elements["usuario"].value;
-            //===============FIREBASE
-            const usuario = {
-              Nombre: nombre,
-              Email: email,
-              Municipio: municipio,
-              Localidad: localidad,
-              Telefono: telefono,
-              Usuario: usuario,
-              Contrasena: psw
-            }
-
-            db.collection('usuarios')
-              .add(usuario)
-            //===============
-            alert("Usuario registrado correctamente");
-            //parent.window.close();
-            location.href="login.html";
-          }else if(psw != pswRepeat){
-            alert("Las constraseñas no coinsiden");
-          }else{
-            alert("Correo electronico no válido");
-          }
-          
-      }
-      function validarEmail(valor) {
-        if (/^\w+([\.-]?\w+)*@(?:|hotmail|outlook|yahoo|live|gmail)\.(?:|com|es)+$/.test(valor)){
-        return true;
-        } else {
-        return false;
-        
-        }
-      }
-  </script>
    <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/usuarios.js"></script>
-    
-    <!--FIREBASE-->
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyAYEtd5VIzBcMhY0GKJ5gT6lGvRIAPl_d8",
-    authDomain: "mielqroo.firebaseapp.com",
-    projectId: "mielqroo",
-    storageBucket: "mielqroo.appspot.com",
-    messagingSenderId: "611107645959",
-    appId: "1:611107645959:web:1fe079adb0334c6ea1d8a2",
-    measurementId: "G-KFW5DB0YPM"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+    <script src="js/registrarse.js"></script>
+
 </body>
 </html>
