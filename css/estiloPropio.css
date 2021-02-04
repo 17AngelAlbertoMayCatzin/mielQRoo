@@ -18,3 +18,8 @@
     font-style: italic;
     font-weight: bold;
 }
+.menu-bar{
+    position: relative;
+    z-index: 100;
+    margin-top: 10px;
+}
