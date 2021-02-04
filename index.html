@@ -12,6 +12,39 @@
 <body>
 	<header>
 		<div class="container">
+			<div class="menu-bar">
+				<div class="row justify-content-lg-between justify-content-center py-3 align-items-center">
+					<div class="col col-auto order-2 order-lg-1">
+						<ul class="nav">
+							<li class="nav-item">
+								<a href="#" class="nav-link active">Inicio</a>
+							</li>
+							<li class="nav-item">
+								<a href="#seccionComerciantes" class="nav-link">Comerciantes</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg text-center col-auto order-1 order-lg-2">
+						<h1><a href="#" class="text-dark website-title">Miel Quintana Roo</a></h1>
+					</div>
+					<div class="col col-auto order-3">
+						<ul class="nav">
+							<li class="nav-item">
+								<a href="#seccionPublicaciones" class="nav-link">Publicaciones</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Contacto</a>
+							</li>
+							<a class="btn btn-outline-primary" href="login.html">Ingresar</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Sección del header fixed -->
+	<div class="container">
+		<div class="header-fixed" id="headerFixed">
 			<div class="row justify-content-lg-between justify-content-center py-3 align-items-center">
 				<div class="col col-auto order-2 order-lg-1">
 					<ul class="nav">
@@ -39,7 +72,7 @@
 				</div>
 			</div>
 		</div>
-	</header>
+	</div>
 	<!-- Sección del carousel -->
 	<section class="carrusel">
 		<div class="container">
@@ -88,7 +121,7 @@
 		</div>
 	</section>
 	<!-- Sección de comerciantes -->
-	<section>
+	<section id="comerciantes">
 		<div class="container">
 			<div class="row" >
 				<div class="col-12" id="seccionComerciantes">
@@ -155,10 +188,11 @@
 	</footer>
 
 	<script src="js/jquery.js"></script>
-	<script src="js/popper.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Archivo script de comerciantes -->
 	<script src="js/comerciantes.js"></script>
 	<script src="js/publicaciones.js"></script>
+	<script src="js/stickHeader.js"></script>
 </body>
 </html>
