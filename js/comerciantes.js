@@ -9,15 +9,24 @@ var descripcionL;
 var title;
 var boton;
 var initListOfTasks;
-let dato;
+var dato;
 function cargarJson() {
-	const xhttp = new XMLHttpRequest();
-	xhttp.open('GET', 'usuarios.json', true);
-	xhttp.send();
+    //AJAX
+    //Objeto XMLHttpRequest para realizar solicitudes de red para recuperar el json usuarios
+    const xhttp = new XMLHttpRequest(); //Instancia 
+    //Abriendo una nueva solicitud utilizando el método open()
+    //Se hace mediante el método get, la ruta del archivo y true para que sea asincrono
+    xhttp.open('GET', 'usuarios.json', true);
+    //Se envía la solicitud con el método send()
+    xhttp.send();    
+    //Conseguimos la respuesta de la solicitud
 	xhttp.onreadystatechange = function(){
+        //Validamos el estado
 		if(this.readyState == 4 && this.status == 200){
-			//console.log(this.responseText);
-			 dato = JSON.parse(this.responseText);
+            //console.log(this.responseText);
+            //Recibimos un texto, y se transforma a JSON con parse
+             dato = JSON.parse(this.responseText);
+             //Llamamos a la función y mandamos el json de usuarios
 			 cargarComerciantes(dato);
 		}
 	}

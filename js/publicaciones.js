@@ -13,16 +13,24 @@ var title1;
 var boton1;
 var initListOfTasks1;
 var dato1;
+//AJAX
+//Objeto XMLHttpRequest para realizar solicitudes de red para recuperar el json publicaciones
 function cargarJson() {
-	const xhttp1 = new XMLHttpRequest();
-	xhttp1.open('GET', 'publicaciones.json', true);
-	xhttp1.send();
+    const xhttp1 = new XMLHttpRequest(); //Instancia 
+    //Abriendo una nueva solicitud utilizando el método open()
+    //Se hace mediante el método get, la ruta del archivo y true para que sea asincrono
+    xhttp1.open('GET', 'publicaciones.json', true);
+    //Se envía la solicitud con el método send()
+    xhttp1.send();
+    //Conseguimos la respuesta de la solicitud
 	xhttp1.onreadystatechange = function(){
+        //validamos el estado
 		if(this.readyState == 4 && this.status == 200){
-			//console.log(this.responseText);
-			 dato1 = JSON.parse(this.responseText);
+            //console.log(this.responseText);
+            //Recibimos un texto, y se transforma a JSON con parse
+             dato1 = JSON.parse(this.responseText);
+             //Llamamos a la función y mandamos el json de publicaciones
              cargarPublicaciones(dato1);
-             console.log(dato1)
 		}
 	}
 }
@@ -40,7 +48,7 @@ function cargarPublicaciones(){
         card1.setAttribute('style','background: #f8efdf; border:none; margin-bottom:40px;');
         //Creamos un elemento imagen 
         cardImg1 = document.createElement('img');
-        cardImg.className = 'card-img-top';
+        cardImg1.className = 'card-img-top';
         //Obtenemos la ruta de la imagen del Json y se lo agregamos al src del elemento img
         cardImg1.src=task.img;
         cardImg1.setAttribute('style','padding: 15px 15px;');
