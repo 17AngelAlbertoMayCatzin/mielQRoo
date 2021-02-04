@@ -23,3 +23,18 @@
     z-index: 100;
     margin-top: 10px;
 }
+.header-fixed{
+    width: 58.35%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: all .4s ease;
+    margin-top: -80px;
+    padding: 0 36px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
