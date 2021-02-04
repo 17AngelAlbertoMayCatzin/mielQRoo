@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var fixedHeader = $('#fixedHeader');
+    var fixedHeader = $('#headerFixed');
     $(window).on('scroll', function(){
         var proyectosOffsetTop = $('#comerciantesScroll').offset().top;
         if($(window).scrollTop()>= proyectosOffsetTop){
