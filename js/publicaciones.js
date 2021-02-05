@@ -58,17 +58,18 @@ function cargarJson() {
 	}
 }
 cargarJson();
-
+var col = new Col('col col-sm-12 col-md-4 col-lg-4', 'padding: 15px 15px; text-align:center;');
+var car = new Card('card', 'background: #f8efdf; border:none; margin-bottom:40px;');
 function cargarPublicaciones(){
 
     createTaskCard1 = (task) => {
         //creamos un elemento DIV con la clase card de Bootstrap4
         col2 = document.createElement('div');
-        col2.className = 'col col-sm-12 col-md-4 col-lg-4';
-        col2.setAttribute('style','padding: 15px 15px; text-align:center;');
+        col2.className = col._className;
+        col2.setAttribute('style', col._setAttribute);
         card1 = document.createElement('div');
-        card1.className = 'card';
-        card1.setAttribute('style','background: #f8efdf; border:none; margin-bottom:40px;');
+        card1.className = car._className;
+        card1.setAttribute('style', car._setAttribute);
         //Creamos un elemento imagen 
         cardImg1 = document.createElement('img');
         cardImg1.className = 'card-img-top';
