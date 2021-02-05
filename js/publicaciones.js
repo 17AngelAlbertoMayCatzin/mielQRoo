@@ -13,6 +13,29 @@ var title1;
 var boton1;
 var initListOfTasks1;
 var dato1;
+class Col{
+    constructor(className, setAttribute){
+        this._className= className;
+        this._setAttribute= setAttribute;
+    }
+    get className (){
+        return this._className;
+    }
+    get setAttribute (){
+        return this._setAttribute;
+    }
+    set className(className){
+        this._className=className;
+    }
+    set setAttribute(setAttribute){
+        this._setAttribute=setAttribute;
+    }
+}
+class Card extends Col{
+    constructor(className, setAttribute){
+        super(className, setAttribute);
+    }
+}
 //AJAX
 //Objeto XMLHttpRequest para realizar solicitudes de red para recuperar el json publicaciones
 function cargarJson() {
