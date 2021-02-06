@@ -38,7 +38,7 @@ function cargarComerciantes(){
     createTaskCard = (task) => {
         //creamos un elemento DIV con la clase card de Bootstrap4
         col1 = document.createElement('div');
-        col1.className = 'col col-sm-12 col-md-4 col-lg-4';
+        col1.className = 'col-12 col-sm-12 col-md-6 col-lg-4';
         col1.setAttribute('style','padding: 15px 15px; text-align:center;');
         card = document.createElement('div');
         card.className = 'card';
