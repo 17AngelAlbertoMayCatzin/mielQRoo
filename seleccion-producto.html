@@ -4,19 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleccionar producto</title>
-    <link rel="stylesheet" href="css/cssApicultor.css">
-    <link rel="Stylesheet" href="css/bootstrap.min.css">
+    <link rel="Stylesheet" href="css/bootstrap.min.css" id="tema">
 </head>
 <body>
+    <div class="col-sm-1">
+        <div class="card">
+            <div class="card-footer text-muted">
+                <a class="btn btn-primary btn-dark" onclick="temaObscuro()">Tema obscuro</a>
+                <hr>
+                <a class="btn btn-primary btn-light" onclick="temaOriginal()">Tema Original</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
+
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-header">
-                        <strong>Miel De Abeja 100% Pura 350g</strong>
+                        <strong>Miel De Abeja 350g</strong>
                     </div>
                     <div class="card-body">
-                        <img class="card-img-top" src="img/Miel Pura.png" alt="Imagen no disponible">
+                        <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Imagen no disponible">
+                        <h4 class="card-title">$399.<small>mxn</small></h4>
+                        <p class="card-text"><small class="text-muted">Envío gratis</small></p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="compra-producto.html" class="btn btn-primary btn-warning">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Miel 100% Pura 200g</strong>
+                    </div>
+                    <div class="card-body">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmLj0YSh9KPfKOSM9DyujOUdAr3kOzmNZijg&usqp=CAU" alt="Imagen no disponible">
                         <h4 class="card-title">$299.<small>mxn</small></h4>
                         <p class="card-text"><small class="text-muted">Envío gratis</small></p>
                     </div>
@@ -29,20 +55,100 @@
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-header">
-                        <strong>Miel De Abeja 100% Pura 350g</strong>
+                        <strong>3 frascos con distintos tipos de miel 80g c/u</strong>
                     </div>
                     <div class="card-body">
-                        <img class="card-img-top" src="img/Miel de Abeja.jpg" alt="Imagen no disponible">
+                        <img class="card-img-top" src="https://www.hogarmania.com/archivos/201802/salud-tipos-miel-propeidades-1280x720x80xX.jpg" alt="Imagen no disponible">
                         <h4 class="card-title">$299.<small>mxn</small></h4>
                         <p class="card-text"><small class="text-muted">Envío gratis</small></p>
                     </div>
                     <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-primary btn-warning">Comprar</a>
+                        <a href="compra-producto.html" class="btn btn-primary btn-warning">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Miel cremada 100g</strong>
+                    </div>
+                    <div class="card-body">
+                        <img class="card-img-top" src="http://3.bp.blogspot.com/-FKVWYu6Hvp4/VZE7JgSRbhI/AAAAAAAAQvQ/ltulFEwFniY/s1600/cod-240-500x500.jpg" alt="Imagen no disponible">
+                        <h4 class="card-title">$359.<small>mxn</small></h4>
+                        <p class="card-text"><small class="text-muted">Envío gratis</small></p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="compra-producto.html" class="btn btn-primary btn-warning">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Miel por mayoreo</strong>
+                    </div>
+                    <div class="card-body">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIUJDRlwbWUHeRy_EHilLeRNyGn_Iau-KyUQ&usqp=CAU" alt="Imagen no disponible">
+                        <h4 class="card-title">$500.<small>mxn</small></h4>
+                        <p class="card-text"><small class="text-muted">Envío gratis</small></p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="compra-producto.html" class="btn btn-primary btn-warning">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Miel De Abeja con panal 350g</strong>
+                    </div>
+                    <div class="card-body">
+                        <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/1868/6055/products/Miel_Abejera_en_panal_350_g.jpg?v=1583257543" alt="Imagen no disponible">
+                        <h4 class="card-title">$399.<small>mxn</small></h4>
+                        <p class="card-text"><small class="text-muted">Envío gratis</small></p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="compra-producto.html" class="btn btn-primary btn-warning">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Miel organica 350g</strong>
+                    </div>
+                    <div class="card-body">
+                        <img class="card-img-top" src="https://d22fxaf9t8d39k.cloudfront.net/f269c820c74b74bce89c702ff788e945.jpg" alt="Imagen no disponible">
+                        <h4 class="card-title">$299.<small>mxn</small></h4>
+                        <p class="card-text"><small class="text-muted">Envío gratis</small></p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="compra-producto.html" class="btn btn-primary btn-warning">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Miel De Abeja 400g</strong>
+                    </div>
+                    <div class="card-body">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxkVvhuL9FzadV6DqatT_xkDKIKV4QGmwtaw&usqp=CAU" alt="Imagen no disponible">
+                        <h4 class="card-title">$259.<small>mxn</small></h4>
+                        <p class="card-text"><small class="text-muted">Envío gratis</small></p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="compra-producto.html" class="btn btn-primary btn-warning">Comprar</a>
                     </div>
                 </div>
             </div>
         </div>
-        
-    </div>
+    </div>    
+    <script src="js/cambiarTema.js"></script>
 </body>
 </html>
