@@ -53,8 +53,8 @@
 	</header>
 	<!-- Sección del header fixed -->
 	<div class="container">
-		<div class="header-fixed" id="headerFixed">
-			<div class="row justify-content-lg-between justify-content-center py-3 align-items-center">
+		<div class="header-fixed d-none d-xl-block" id="headerFixed">
+			<div class="row ">
 				<div class="col col-auto order-2 order-lg-1">
 					<ul class="nav">
 						<li class="nav-item">
@@ -76,7 +76,16 @@
 						<li class="nav-item">
 							<a href="#" class="nav-link">Contacto</a>
 						</li>
-						<a class="btn btn-outline-primary" href="login.html">Ingresar</a>
+						<div class="dropdown">
+							<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" style="background-color:#00e0ff; " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-user-circle"></i>
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#">Mi cuenta</a>
+								<a class="dropdown-item" href="index.html">Cerrar Sesión</a>
+							 </div>
+							<!-- <a class="btn btn-outline-primary" href="profile.html"></a> -->
+						</div>
 					</ul>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 var usuario;
 var contrasena;
-var dato;
+var dato = {};
 //AJAX
 //Objeto XMLHttpRequest para realizar solicitudes de red para recuperar el json usuarios
 function cargarJson() {
@@ -18,30 +18,25 @@ function cargarJson() {
 			//Recibimos un texto, y se transforma a JSON con parse
 			 dato = JSON.parse(this.responseText);
 			 //Llamamos a la función y mandamos el json de publicaciones
-			 iniciarSesion(dato);
+			//  iniciarSesion(dato);
 		}
 	}
 }
 cargarJson();
-try {
-	function iniciarSesion(){
-		usuario = document.getElementById("username").value;
-		contrasena = document.getElementById("password").value;
-		var userAndPasswordPresent = false;
-		for (var i in dato) {
-			if (dato[i].user === usuario && dato[i].password === contrasena) {
-				userAndPasswordPresent = true;
-			}
+
+function iniciarSesion(){
+	console.log(dato);
+	usuario = document.getElementById("username").value;
+	contrasena = document.getElementById("password").value;
+	var userAndPasswordPresent = false;
+	for (var i in dato) {
+		if (dato[i].user === usuario && dato[i].password === contrasena) {
+			userAndPasswordPresent = true;
 		}
-		if(userAndPasswordPresent==true){
-		alert('Bienvenido');
-		  window.open("index-access.html");
-		} 
-		}
-	throw "myException"; // genera una excepción
- }
- catch (e) {
-	// sentencias para manejar cualquier excepción
-	console.log(e); // pasa el objeto de la excepción al manejador de errores
- }
+	}
+	if(userAndPasswordPresent==true){
+	alert('Bienvenido');
+	  window.open("index-access.html");
+	} 
+}
 
