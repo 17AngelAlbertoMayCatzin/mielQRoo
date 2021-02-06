@@ -58,7 +58,7 @@ function cargarJson() {
 	}
 }
 cargarJson();
-var col = new Col('col col-sm-12 col-md-4 col-lg-4', 'padding: 15px 15px; text-align:center;');
+var col = new Col('col-12 col-sm-12 col-md-6 col-lg-4', 'padding: 15px 15px; text-align:center;');
 var car = new Card('card', 'background: #f8efdf; border:none; margin-bottom:40px;');
 function cargarPublicaciones(){
 
