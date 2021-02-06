@@ -24,15 +24,14 @@
     margin-top: 10px;
 }
 .header-fixed{
-    width: 58.35%;
-    background-color: #fff;
+    margin-left: 80px;
+    color: rgb(255, 238, 75);
+    background-color: rgba(255, 238, 75, 0.8);
     position: fixed;
     top: 0;
     z-index: 100;
     transition: all .4s ease;
     margin-top: -80px;
-    padding: 0 36px;
     justify-content: space-between;
-    flex-direction: row;
-    
+    flex-direction: row; 
 }
