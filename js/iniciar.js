@@ -34,7 +34,7 @@ try {
 			}
 		}
 		if(userAndPasswordPresent==true){
-			alert('Bienvenido');
+		alert('Bienvenido');
 		  window.open("index-access.html");
 		} 
 		}
